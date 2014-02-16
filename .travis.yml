@@ -38,14 +38,16 @@ env:
   global:
     # This is the encrypted COVERITY_SCAN_TOKEN, created via the "travis
     # encrypt" command using the project repository's public key.
-    - secure: "ggJ9c/VfKcwtrwz/My+ne4My7D8g3qi3vz5Hh+yLiri0+oIXCy313ZD6ssIEY/5beQZEOnuHhBgBJd/Y3clSQNc2M9fRNc+wxOkIO992lgnY0MZJN3y9MLfpqUbTClhU9Fst0qXQqGpI6UI8yz1tj7yKi7DPrycJLRrjMpyTfyo="
+    #- secure: "ggJ9c/VfKcwtrwz/My+ne4My7D8g3qi3vz5Hh+yLiri0+oIXCy313ZD6ssIEY/5beQZEOnuHhBgBJd/Y3clSQNc2M9fRNc+wxOkIO992lgnY0MZJN3y9MLfpqUbTClhU9Fst0qXQqGpI6UI8yz1tj7yKi7DPrycJLRrjMpyTfyo="
+    - secure: "Pdo576S8tFGilNu5e9/la1QR59mtvJ+WQPVw6T9yWhdqQ5qHXa8CAR8Uis10ZM+0OcCQ04YSzvK23dNsYOoyXflqzv9K3V0CCr/SOtctqTIClHpIeNxFmSKl8DTwLpw+m2sA2HJSIJ4LaAu1ahtQVF71J16kaCe5qhFUQRbksjI="
 
 addons:
   coverity_scan:
     project:
-      name: "monitoring-plugins/monitoring-plugins"
+      #name: "monitoring-plugins/monitoring-plugins"
+      name: "waja/monitoring-plugins"
       description: "Monitoring Plugins"
-    notification_email: team@monitoring-plugins.org
+    #notification_email: team@monitoring-plugins.org
     build_command_prepend: tools/setup && ./configure
     build_command: make
     branch_pattern: coverity
