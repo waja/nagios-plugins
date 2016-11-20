@@ -29,7 +29,7 @@ install:
   - sudo apt-get install -qq --no-install-recommends autoconf automake
   - sudo apt-get install -qq --no-install-recommends faketime
   # Trusty related dependencies (not yet provided)
-  - sudo apt-get install -qq --no-install-recommends mariadb-client mariadb-server
+  #- sudo apt-get install -qq --no-install-recommends mariadb-client-5.6 mariadb-server-5.6
 
 before_script:
   # ensure we have a test database in place for tests
